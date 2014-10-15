@@ -3,6 +3,7 @@ package gsconfig
 import (
 	"errors"
 	"strconv"
+	"time"
 
 	"github.com/gsdocker/gserrors"
 )
@@ -134,4 +135,9 @@ func Float64(key string, defaultval float64) float64 {
 //Float32 .
 func Float32(key string, defaultval float32) float32 {
 	return float32(Float64(key, float64(defaultval)))
+}
+
+//Seconds .
+func Seconds(key string, defaultval int64) time.Duration {
+	return time.Duration(Int64(key, defaultval)) * time.Second
 }
