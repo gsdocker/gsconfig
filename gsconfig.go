@@ -98,6 +98,11 @@ func Uint16(key string, defaultval uint16) uint16 {
 	return uint16(Uint64(key, uint64(defaultval)))
 }
 
+//Uint .
+func Uint(key string, defaultval uint) uint {
+	return uint(Uint64(key, uint64(defaultval)))
+}
+
 //Bool .
 func Bool(key string, defaultval bool) bool {
 	val, ok := Get(key)
@@ -140,4 +145,9 @@ func Float32(key string, defaultval float32) float32 {
 //Seconds .
 func Seconds(key string, defaultval int64) time.Duration {
 	return time.Duration(Int64(key, defaultval)) * time.Second
+}
+
+//Milliseconds .
+func Milliseconds(key string, defaultval int64) time.Duration {
+	return time.Duration(Int64(key, defaultval)) * time.Millisecond
 }
