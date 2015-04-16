@@ -71,6 +71,11 @@ func Int16(key string, defaultval int16) int16 {
 	return int16(Int64(key, int64(defaultval)))
 }
 
+//Int .
+func Int(key string, defaultval int) int {
+	return int(Int64(key, int64(defaultval)))
+}
+
 //Uint64 .
 func Uint64(key string, defaultval uint64) uint64 {
 	val, ok := Get(key)
