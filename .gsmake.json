@@ -2,6 +2,6 @@
     "name":"github.com/gsdocker/gsconfig",
 
     "import" : [
-        {"name" : "github.com/gsdocker/gserrors","scope":"task|runtimes"}
+        {"name" : "github.com/gsdocker/gserrors","version":"v1.2","scope":"task|runtimes"}
     ]
 }
