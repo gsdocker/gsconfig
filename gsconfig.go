@@ -21,7 +21,14 @@ func init() {
 
 //Save save as global config
 func Save(kvs map[string]string) {
-	config = kvs
+	for k, v := range kvs {
+		config[k] = v
+	}
+}
+
+// Set set new config item
+func Set(k, v string) {
+	config[k] = v
 }
 
 //Get .
