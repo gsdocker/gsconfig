@@ -7,7 +7,7 @@ import (
 
 // LoadJSON load config from json file
 func LoadJSON(file string) error {
-	var pairs map[string]string
+	var pairs map[string]interface{}
 
 	data, err := ioutil.ReadFile(file)
 
