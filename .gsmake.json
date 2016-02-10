@@ -1,7 +1,0 @@
-{
-    "name":"github.com/gsdocker/gsconfig",
-
-    "import" : [
-        {"name" : "github.com/gsdocker/gserrors","version":"v2.0"}
-    ]
-}
